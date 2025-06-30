@@ -91,7 +91,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-       I am a seasoned designe lead, turned Web3 Product Lead and builder. I put years of experiencce,
+       I am a seasoned designe lead, turned Web3 Product Lead and builder. I put 15 years of experience,
        having released more than 20 products, to help Web3 projects ship relevant, profitable and desirable
        products at speed.
       </>

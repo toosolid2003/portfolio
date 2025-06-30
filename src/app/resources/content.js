@@ -15,11 +15,11 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Let's have a chat!</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Great ideas die in the gap between vision and execution. 
+      I close that gap with smart contracts, real UX, and lean product loops.
     </>
   ),
 };

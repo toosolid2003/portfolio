@@ -38,7 +38,7 @@ const social = [
     link: "https://www.linkedin.com/in/thibautsegura",
   },
   {
-    name: "X",
+    name: "Twitter",
     icon: "x",
     link: "https://x.com/thedesignmojo?s=11",
   },
@@ -56,10 +56,10 @@ const home = {
   // title: `${person.name}'s Portfolio`,
   title: 'Building smart in Web3',
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Helping teams ship prodcuts faster and smarter </>,
+  headline: <>Product Lead and Web3 Builder </>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Recent project: <strong className="ml-4">Rental Scoring</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
@@ -80,7 +80,7 @@ const about = {
     subItems: false,
   },
   avatar: {
-    display: true,
+    display: false,
   },
   calendar: {
     display: true,
@@ -91,9 +91,9 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+       I am a seasoned designe lead, turned Web3 Product Lead and builder. I put years of experiencce,
+       having released more than 20 products, to help Web3 projects ship relevant, profitable and desirable
+       products at speed.
       </>
     ),
   },
@@ -102,17 +102,17 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
+        company: "Segura Design",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Founder & Product Lead",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Helped Web3 projects narrow down their product-market fit, generating sustained user adoption and
+            generating stable fees in turbulent markets.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Streamlined product development processes, providing purpose, clarity and additional velocity to Web3 project. 
+            Result: reduced burn rate and increased capital efficiency (user acquisition, product discovery, etc)
           </>,
         ],
         images: [
@@ -126,17 +126,22 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Fjord / Accenture",
+        timeframe: "2013 - 2021",
+        role: "Design Lead",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Delivered high-impact design projects for major Fortune 500 companies, tackling customer
+            issues such as acquisition, retention or LTV, through a design lens.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Grew a multi-disciplianry set of design skills (business, service and product design) to approach
+            increasignly challenging situations, from creating a start-up from scratch to spinning joint venutres
+            with multiple high-value players.
+          </>,
+          <>
+            Led product teams of up to 40 professionals, from concept creation to v1, acting as product lead, preserving the products' initial
+            intents throughout the development process. 
           </>,
         ],
         images: [],
@@ -145,15 +150,15 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Training",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Ensci-Les Ateliers",
+        description: <>Masters in Design</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "ESCP Europe",
+        description: <>"Grande Ecole", Master Strategy</>,
       },
     ],
   },
@@ -163,26 +168,27 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: <>Quick prototyping using the latest Figma features, including
+        AI generation.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images:[],
+      },
+      {
+        title: "Solidity",
+        description: <>Smart contract development, with a focus on security and clever used
+        of the most recent tooling (Hardhat, Foundry)</>,
+        // optional: leave the array empty if you don't want to display images
+        images:[],
+      },
+      {
+        title: "React",
+        description: <>Front-end development using the latest combos in Web3 (React, Wagmi, etc)</>,
+        // optional: leave the array empty if you don't want to display images
+        images:[],
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: <>Building next gen apps with Next.js</>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -200,7 +206,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about design, tech and Web3...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -210,7 +216,7 @@ const work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Build projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };

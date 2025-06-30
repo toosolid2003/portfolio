@@ -1,0 +1,76 @@
+---
+title: "Learnings from building a secure vault in Solidity"
+publishedAt: "2025-06-30"
+summary: "Learnings after building a composable micro-app with Solidity, React, ethers.js and wagmi"
+tag: "Web3"
+---
+
+I strongly believe that if you want to understand a thriving, promising technology, you have to build with it. Getting your hands dirty, if you will, is the surest way to grasp the potential and limitations of Web3, beyond the hype, hopes and fears.
+
+I trained as a designer and one of the core lessons you get in design school is “thinking by doing”. Thought closely associated with action. 
+I’ve been a Web3 enthusiast for years: buying tokens, selling them, staking them, swapping, etc. 
+I even got into validating nodes for a while, but nothing replaces building your own thing.
+
+So I built a micro-app. Simple, but relevant. Full-stack. Composable. 
+A secure vault that enables a collective to create a task, a bug bounty for instance, assign a winner or get a refund if a deadline is not met.
+I scoped, designed, and built the entire dApp—from Solidity contracts to React UI. 
+The result is a secure, composable micro-app designed to be integrated into larger DAO or bounty workflows.
+
+Backend (Solidity) - Front-End (React) - Demo
+
+## Security isn’t a feature, it’s a prerequisite
+
+That seems like a no-brainer. Web3 manipulates value through code, it is only natural that it attracts a lot of hackers. The payout for hacking smart contracts is much bigger than hacking into databases and try to resell that data on the dark web.
+
+Security was my first concern, the foundational element of my build. I tested multiple possible scenarios, starting from the most basic ones, Reentrancy and integer overflow. This effort opens a direct window into the intricacies of Solidity, its limitations as a relatively young language and the industry-standards workaround (thanks OpenZeppelin, by the way).
+
+Covering the different hacking scenarios also opened a different way to think about the possibilities of this micro-app, beyond its intended use. We used to call that “dark patterns” in the design world. In Web3, evaluating how people can use your tech for nefarious purposes is uncomfortable, but all too necessary. That’s why placing the user front and centre is critical. Never assume how people are going to use your tech: test it with them, and you’ll be surprised by human creativity.
+Most projects start with contracts — but the winners start with use cases
+
+## Contract first, users later. 
+
+That’s the current pattern. Honestly, we could see a similar pattern at the dawn of Web2: throw your tech out there and see what sticks - and not a lot did. But I now get the appeal. The technology is pregnant with so many possibilities, some revolutionary, hitting at the core of capitalism - the transfer of value - that it is hard not to get carried away.
+
+Solidity made a great job at simplifying contract creation. I found it quite easy to write, compile and deploy a contract, compared to doing anything else in Web2. at some point, I could see so many improvements that I lost track of the core:
+
+- What would people want to do with this?
+- What situation is this product going to improve?
+- How do we make its features easy to understand and use?
+
+That’s when I decided to stop with the back-end, get back to the drawing table and see what user flows I wanted to enable, based on what needs and expectations I captured in the genesis of this project. This is a foundational element of good products. Understanding a painful situation, what drives it, what people are doing to mitigate it, is the like building a north star for your project. In times of doubt, get back to it. You will stay relevant, rein in your desire to build tech for the sake of it, and make sure you use your capital in the most efficient way.
+
+## Product irrelevance is the biggest capital sink in early-stage Web3.
+
+I’ve screened a lot of Web3 projects, and one thing I could hardly figure out is why spend so much 
+capital on useless features, when the core of your product is not even usable?
+
+Building features on the back-end is pretty straightforward. It follows a logical pathway, 
+and there is a lot of infrastructure to help you. Piling features on top of each other becomes easy, 
+playing into the illusion that “more features = more value”. Meanwhile, few resources are left for the front-end. Just enough to work through the complexity of having multiple, disjointed pieces of tech work together (Wagmi, ethers.js and React, to name a few) and add a level of polish to your CSS. I spent many more hours building the front than the back-end. The interactions I’m enabling are simple, but they absorbed most of my time.
+
+In the light of this experience, it seems that, on the surface, allocating capital to features and capabilities, 
+a.k.a the back-end, seems like a better investment. You deal with a more integrated stack, 
+making you more efficient and you believe you add more value to your product. 
+Your front-end will suffer, further pushing down a hole you stepped into in day 1: is your product relevant to 
+anybody?
+
+The front-end stack will improve, I’m sure, making it less resource-intensive. 
+The core of the issue will remain the same: are we using the capital we painfully raised to solve a problem people are willing to pay for?
+
+## Capital efficiency through relevancy
+
+The taboo question in web3 is about relevancy. A product wins by being relevant. 
+You generate traction by helping your users over and over, until you become an obvious choice to them. 
+Products don’t win with sleek interfaces and super fast tech. Everything that helps your product become and stay relevant to your users, in their lives, is a good use of capital. 
+This means knowing what features to build before you build them, knowing what kind of experience you want to 
+support before jumping into Figma.
+
+At this stage of my builder’s journey, I am convinced that relevancy is the key to on-boarding the next 
+billion users. The potential is here, easy to activate thanks to the amazing infrastructure the Web3 has created 
+in the past years. The front-end will follow, I’m sure - Wagmi is very promising, as is account abstraction.
+
+Web3 has the infra. What it needs now are teams who can test real hypotheses, ship small, and build toward relevance — not just features. 
+That’s the gap I’m here to close.
+
+If you’re building in Web3 and want to ship faster, smarter, and with more focus — DM me!
+

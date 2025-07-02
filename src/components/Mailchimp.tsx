@@ -81,7 +81,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
       </Text>
 
       <a href="mailto:contact@segura.design" style={{ textDecoration: "none", width: "100%", maxWidth:"320px" }}>
-        <Button size="m" fillWidth>
+        <Button size="m" fillWidth data-umami-event="contact">
           Contact me
         </Button>
       </a>

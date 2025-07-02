@@ -10,6 +10,8 @@ import { Background, Column, Flex, ThemeProvider, ToastProvider } from "@/once-u
 import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
+import Script from 'next/script'
+
 export async function generateMetadata() {
   return Meta.generate({
     title: home.title,
@@ -67,8 +69,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
-        <script defer src="http://167.172.46.110:3000/script.js" data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247">
-        </script>
+        <Script src="http://167.172.46.110:3000/script.js" data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247" />
       </head>
       <ThemeProvider>
         <ToastProvider>

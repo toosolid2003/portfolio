@@ -69,8 +69,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
-        <Script src="http://167.172.46.110:3000/script.js" data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247" />
       </head>
+        <Script
+          src="http://167.172.46.110:3000/script.js"
+          data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247"
+          strategy="afterInteractive"
+          />
       <ThemeProvider>
         <ToastProvider>
           <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">

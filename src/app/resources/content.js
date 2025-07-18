@@ -54,7 +54,7 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   // title: `${person.name}'s Portfolio`,
-  title: 'Building smart in Web3',
+  title: 'Thibaut Segura, holistic builder',
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Product Lead and Web3 Builder </>,
   featured: {

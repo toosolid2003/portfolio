@@ -1,4 +1,4 @@
-import { ImageResponse } from "next/og";
+// import { ImageResponse } from "next/og";
 import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 
@@ -11,6 +11,7 @@ export async function GET(request: Request) {
     res.arrayBuffer(),
   );
   const fontData = await font;
+  const { ImageResponse } = await import("next/og");
 
   return new ImageResponse(
     <div

@@ -80,7 +80,12 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         {newsletter.description}
       </Text>
 
-      <a href="mailto:contact@segura.design" style={{ textDecoration: "none", width: "100%", maxWidth:"320px" }}>
+      <a href="mailto:contact@segura.design" style={{ textDecoration: "none", width: "100%", maxWidth:"320px" }} onClick={() =>  {
+        if (typeof umami !== 'undefined') {
+          umami.track('Email click');
+          console.log('[umami] Email click tracked');
+        }
+      }}>
         <Button size="m" fillWidth data-umami-event="contact">
           Contact me
         </Button>

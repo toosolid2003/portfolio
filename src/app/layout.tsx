@@ -75,6 +75,21 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247"
           strategy="afterInteractive"
           />
+          <Script id="umami-scroll-tracking" strategy="afterInteractive">
+            {`
+              let hasScrolled = false;
+            
+              window.addEventListener('scroll', () => {
+                const scrollDepth = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+                if (scrollDepth > 0.5 && !hasScrolled) {
+                  hasScrolled = true;
+                  if (typeof umami !== 'undefined') {
+                    umami.track('Scroll 50%');
+                  }
+                }
+              });
+            `}
+          </Script>
       <ThemeProvider>
         <ToastProvider>
           <Column style={{ minHeight: "100vh" }} as="body" fillWidth margin="0" padding="0">

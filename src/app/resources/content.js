@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Product Lead & Web3 builder",
+  role: "Web3 Builder. Strategic Operator. No BS.",
   avatar: "/images/avatar.jpg",
   email: "contact@segura.design",
   location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -15,11 +15,10 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Let's have a chat!</>,
+  title: <>Web3 founder? Need product traction?</>,
   description: (
-    <>
-      Great ideas die in the gap between vision and execution. 
-      I close that gap with smart contracts, real UX, and lean product loops.
+    <>     
+      I turn early ideas into live apps.
     </>
   ),
 };
@@ -56,15 +55,15 @@ const home = {
   // title: `${person.name}'s Portfolio`,
   title: 'Thibaut Segura, holistic builder',
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Product Lead and Web3 Builder </>,
+  headline: <>Web3 Product Lead & Builder</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Rental Scoring</strong></>,
+    title: <>Recent project: <strong className="ml-4">Rental Scoring dApp</strong></>,
     href: "/work/rental-scoring",
   },
   subline: (
     <>
-      I'm Thibaut, ex–design lead turned Web3 builder. I combine product strategy, UX, and Solidity to help teams validate value before they waste their capital.
+      I help early teams move from vague ideas to usable products fast. UX, product thinking, and Solidity — all in one builder.
       <br />
     </>
   ),

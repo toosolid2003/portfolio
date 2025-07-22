@@ -87,7 +87,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
         }
       }}>
         <Button size="m" fillWidth data-umami-event="contact">
-          Contact me
+          Email me
         </Button>
       </a>
     </Column>

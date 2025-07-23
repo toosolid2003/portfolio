@@ -1,0 +1,55 @@
+---
+title: "Building for adoption in Web3"
+publishedAt: "2025-07-23"
+summary: "Build products that beyond solving pain points, dramatically improve people's situations"
+tag: "Product"
+---
+
+## Stop solving pain points. Improve situations.
+Many product builders start by solving “pain points.” It’s practical. Pain points are easily scoped, easily sold to stakeholders, and fit neatly into user stories and agile boards. But solving pain points creates good enough products — not great ones.
+
+Great builders aim higher. We want to improve people’s situations — richer, messier, more human.
+
+A situation is a nexus of problems, pain points but also unmet expectations, aspirations and relationships. It captures the richness of our lives much better: emotions, aspirations, limitations, too - all part of a situation. Let's take someone looking for her next apartment. 
+
+She's found a new place to live, she loves the neighbourhood, and she projects herself living there for a few years, and, who knows, moving in with her partner. But the competition is fierce. A lot of people have visited the place, so to feel better in control, she over-documents her application. She puts everything in there, with no regards for her privacy (it's worth it, she thinks): pay slips, work contract, parents pay slips, a cover letter, phone bills, credit score, etc. On the other side, the landlord is flooded with applications full of extensive but often irrelevant documentation. He cares about one thing: find someone who would pay on time and take good care of the place. 
+
+That's a situation. It's emotional, it's also transactional, but above all, it could be life changing. All factors that drive human behaviours. The key questions for them are: How does she reassure the landlord? How does he assess the tenants' reliability? 
+
+## Creating trust in a tenant's reliability through blockchain
+
+The best predictor of a future behaviour is your past behaviour. 
+That's where the idea of the rental dApp comes from. Track rental payments on-chain and create a reliability score for tenants. 
+Reward tenants for paying on time by increasing their score. The higher the score, the more reliable. 
+Make that score portable so that tenants can indisputably attest to their behaviour and get in front of the competition. 
+To landlords, it solves one critical problem: assessing candidates reliability without having to sift through mountains of 
+documents.
+
+Putting the app on-chain provides clear benefits. The track record is immutable, but also accessible to anyone. 
+It doesn't know borders, not tied to any administration or institution. That makes the blockchain the perfect technology to 
+support the app.
+
+## Composability: prime a dApp for future growth
+Every MVP needs a core use case, around which you can articulate future features. For this app, it's the payment flow. 
+The tenants connects their wallet, click on pay and get a confirmation. Easy as that. The core UI element to support this is a 
+dashboard: payment history, available amount and next payment date. Around this, I can add attestations, payment through IBAN, etc. As long as the core value proposition stays the same, the screens can evolve marginally and I could send the logic into custom hooks (usePayRent and useRentalInfo).
+
+I wanted the app to be minimalistic on purpose. No fluff, good UI without showing off, and an indisputable clarity in its purpose, 
+so that it does not need any explanation about what it does. Most important: I wanted the app to be able to either evolve 
+rapidly on its own and be integrated into another workflow. That's why I used pre-made, adaptable UI components (Shadcn) and 
+break the logic into independent components, easy to discard or build on.
+
+## Coming next: more user value
+The app now supports its core use case: on-chain payment, but is still very "crypto" oriented. Next on the roadmap: 
+- Attestations, through EAS. An elegant way to create a verifiable trail of payments without compromising tenants' privacy. 
+- Sharable artifact representing the tenant's score (QR code or NFT)
+- IBAN payments (crypto-to-fiat) so that the owner does not have to worry about off-ramping.
+
+Ideally, the prioritization should come from a user evaluation. I won't be testing for usability, I'd be testing for value. 
+I’ll test this MVP with potential users by asking: what problems does it solve? Does it make your situation better? 
+If yes, does it make better enough that you'd want to switch?
+This kind of value testing costs little - 10 interviews - and gives you clear signals about what is expected and 
+how well your app responds to these expectations. 
+
+Now, off to show this product to the world. And beyond this product, I’m looking for early collaborators, users, and 
+builders who care about meaningful adoption. If that’s you, let’s talk.

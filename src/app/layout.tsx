@@ -71,7 +71,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         />
       </head>
         <Script
-          src="https://analytics.segura.build/script.js"
+          src="http://analytics.segura.build/script.js"
           data-website-id="76bc3987-546d-410d-955f-063bb1dfdb2d"
           strategy="afterInteractive"
           />

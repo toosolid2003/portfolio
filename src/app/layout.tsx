@@ -72,7 +72,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       </head>
         <Script
           src="https://analytics.segura.build/script.js"
-          data-website-id="e2de5adc-9fe0-45d8-8c1f-078cc1c8d247"
+          data-website-id="76bc3987-546d-410d-955f-063bb1dfdb2d"
           strategy="afterInteractive"
           />
           <Script id="umami-scroll-tracking" strategy="afterInteractive">

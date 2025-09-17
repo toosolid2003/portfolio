@@ -18,14 +18,14 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string | string[] }>;
+  params: { slug: string | string[] };
 }): Promise<Metadata> {
-  const routeParams = await params;
-  const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
+  // const routeParams = await params;
+  // const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
+  const slugPath = Array.isArray(params.slug) ? params.slug.join('/') : params.slug || '';
 
   const posts = getPosts(["src", "app", "blog", "posts"])
   let post = posts.find((post) => post.slug === slugPath);
-
   if (!post) return {};
 
   return Meta.generate({

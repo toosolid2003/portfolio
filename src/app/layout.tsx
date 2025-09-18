@@ -11,6 +11,7 @@ import { opacity, SpacingToken } from "@/once-ui/types";
 import { Meta } from "@/once-ui/modules";
 
 import Script from 'next/script'
+import Head from 'next/head'
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -48,8 +49,10 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         font.code.variable,
       )}
     >
-      <head>
-        <script
+      <Head>
+        <Script
+          id="theme-script"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
@@ -69,7 +72,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
-      </head>
+      </Head>
         <Script
           src="https://analytics.segura.build/script.js"
           data-website-id="f8aade15-f42b-4f51-ba1c-6ca9fca99c31"

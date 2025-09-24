@@ -157,7 +157,7 @@ const about = {
       },
       {
         name: "ESCP Europe",
-        description: <>"Grande Ecole", Master Strategy</>,
+        description: <>Grande Ecole, Master Strategy</>,
       },
     ],
   },

@@ -9,20 +9,17 @@ import type { Metadata, ResolvingMetadata } from 'next';
 import { Meta, Schema } from "@/once-ui/modules";
 
 
-export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  const posts = getPosts(["src", "app", "blog", "posts"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
+// export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
+//   const posts = getPosts(["src", "app", "blog", "posts"]);
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }));
+// }
 
-export async function generateMetadata( { params } : { params: { slug : string }}) {
-
-  const slugPath = Array.isArray(params.slug)
-    ? params.slug.join('/')
-    : params.slug || '';
+export async function generateMetadata( { params } : { params: Promise<{ slug : string }>}) {
   
-  // const slugPath = Array.isArray(params.slug) ? params.slug.join('/') : params.slug || '';
+  const routeParams = await params;
+  const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
 
   const posts = getPosts(["src", "app", "blog", "posts"]);
   let post = posts.find((post) => post.slug === slugPath);
@@ -39,13 +36,10 @@ export async function generateMetadata( { params } : { params: { slug : string }
 
 export default async function Blog({
   params
-}: { params : {slug: string } }) {
-  // const routeParams = await params;
-  // const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
+}: { params : Promise<{slug: string }> }) {
+  const routeParams = await params;
+  const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
 
-  const slugPath = Array.isArray(params.slug)
-    ? params.slug.join('/')
-    : params.slug || '';
   
 
   let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slugPath);

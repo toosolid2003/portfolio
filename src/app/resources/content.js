@@ -139,7 +139,7 @@ const about = {
             with multiple high-value players.
           </>,
           <>
-            Led product teams of up to 40 professionals, from concept creation to v1, acting as product lead, preserving the products' initial
+            Led product teams of up to 40 professionals, from concept creation to v1, acting as product lead, preserving the product initial
             intents throughout the development process. 
           </>,
         ],

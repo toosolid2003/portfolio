@@ -49,7 +49,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
         font.code.variable,
       )}
     >
-      <Head>
         <Script
           id="theme-script"
           strategy="beforeInteractive"
@@ -72,7 +71,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
             `,
           }}
         />
-      </Head>
         <Script
           src="https://analytics.segura.build/script.js"
           data-website-id="f8aade15-f42b-4f51-ba1c-6ca9fca99c31"

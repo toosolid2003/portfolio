@@ -5,7 +5,7 @@ import { AvatarGroup, Button, Column, Heading, HeadingNav, Icon, Row, Text } fro
 import { about, blog, person, baseURL } from "@/app/resources";
 import { formatDate } from "@/app/utils/formatDate";
 import ScrollToHash from "@/components/ScrollToHash";
-import { Metadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 import { Meta, Schema } from "@/once-ui/modules";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -15,16 +15,13 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string | string[] };
-}): Promise<Metadata> {
-  // const routeParams = await params;
-  // const slugPath = Array.isArray(routeParams.slug) ? routeParams.slug.join('/') : routeParams.slug || '';
+export async function generateMetadata(
+  { params }: { params: { slug: string | string[] } },
+  parent?: ResolvingMetadata
+): Promise<Metadata> {
   const slugPath = Array.isArray(params.slug) ? params.slug.join('/') : params.slug || '';
 
-  const posts = getPosts(["src", "app", "blog", "posts"])
+  const posts = getPosts(["src", "app", "blog", "posts"]);
   let post = posts.find((post) => post.slug === slugPath);
   if (!post) return {};
 

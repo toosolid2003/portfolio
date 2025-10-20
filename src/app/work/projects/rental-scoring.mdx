@@ -7,21 +7,59 @@ team:
     role: "Product Lead & Builder"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/in/thibautsegura/"
+images: 
+  - "images/projects/rental-dapp/Home_Screen.png"
+  - "images/projects/rental-dapp/Payment_Screen.png"
 ---
 
-## Your past behaviour is the best predictor of your future behaviour
-In the current rental market, renters need a reliable way to prove their good behaviour—most importantly, 
-paying rent on time. Landlords often rely on tangential documents to assess reliability, without access to hard data. 
-This becomes especially problematic for renters who move internationally and need to demonstrate credibility across borders.
+## The hassle of proving your reliability
+In countries where tenants enjoy much protection, landlords tend to be extra cautious when choosing their new tenants. 
+It usually translates into them asking for a mountain of documents in a bid to assess the reliability of candidates. 
 
-Hestia tracks rental payments on-chain and rewards renters each time a rent is paid on time. 
-By the end of a lease, a renter accumulates a score that reflects their payment reliability. 
-This score can be confidently shared with future landlords to streamline the rental application process.
+In France, where I'm from, I remember being asked every possible financial document: payslips, parents' income, tax records, 
+work contracts, bank extracts - even criminal records! The rental market was so competitive that if you wanted to stand a chance,
+you had to comply. The stakes were high - I was looking for a place to live - and I couldn't help but feeling used by this system.
 
-By leveraging blockchain, Hestia eliminates disputes about who paid, when, and how. Everything is publicly verifiable. 
-To preserve privacy, wallet addresses remain anonymous, but each payment generates an attestation. 
-These attestations not only spare landlords the headache of issuing receipts, but also serve as irrefutable proof of payment from renter to landlord.
+The worst part: few of this documents were actually a true reflection of my reliability. I had to disclose very private information
+for someone to inaccurately assess if I could pay my rent or not. Ineffective, invasive, just plain bad. 
 
+## Your track record is the best predictor of your reliability
+This is one of these statistically-true fact that don't get translated into reality. It would have been much more accurate
+to ask for a payment record instead of all this useless paperwork. The problem: there was no good way to do that. The only thing I could 
+do was to provide bank extracts but I doubt any landlords will sift through 2 years worth of transactions to verify that I
+paid my rent in time and in full. Especially when you had 30 applications per apartment. Enter blockchain: 
+What if every rent payment generated an immutable, verifiable record—without exposing my entire financial history?
+
+## Unfalsifiable payment records? Say no more...
+That's just the core of the blockchain: immutability, provability, transparency. This is where Hestia comes: provide 
+an easy way for tenants to pay their rent, have their payments recorded on-chain and, cherry on the cake, generate a verifiable,
+encrypted attestation that proves all of these payments have been made on-time - with a reliability score attached. 
+
+## Pay and prove. Radical simplicity.
+The payment procedure is as simple as possible:
+
+![Home Screen - Connect and view lease details](images/projects/rental-dapp/Home_Screen.png)
+
+* Connect your wallet
+* Pay the rent amount
+* Move on with your life
+
+![Payment Screen - One-click rent payment](images/projects/rental-dapp/Payment_Screen.png)
+
+When you're looking for your next place to live, the dApp can generate an attestation that proves every payment made and attaches a reliability
+score to you. Think of ratings like AAA or AA+ for tenants. Simple as that: pay and prove. The landlord can just drop the attestation ID you
+gave them into a UI and all your verified payment record will appear. 
+
+
+
+
+
+## Blockchain was meant for these use cases
+I start projects with one question in mind: is this going to benefit people in real life?
+This is one use case that is the product of user research - a few interviews to understand the gap between exisiting needs and exisiting
+solutions - that led to a working proof-of-concept. 
+Choosing Web3 technologies was easy and obvious: immutability, privacy, verifiability, all core values of the tech stack I used to build
+this product. 
 
 
 ## Key Features
@@ -33,12 +71,19 @@ These attestations not only spare landlords the headache of issuing receipts, bu
 ## Technology
 - Solidity ^0.8.28
 - OpenZeppelin Contracts (Ownable, ReentrancyGuard)
+- Ethereum Attestation Services for attestations
 - Hardhat for testing & deployment
 - ETH testnet compatible (e.g., Sepolia or Goerli)
 
-## Going further
-Are you working on Web3 products tackling real-world trust or coordination problems? 
-Let’s connect — I’m always eager to collaborate or brainstorm ideas.
-
 ## Check the repo for a demo and code
 [Github repo](https://github.com/toosolid2003/rental)
+
+## Want to collaborate?
+I'm building trust infrastructure for real-world coordination problems. If you're working on 
+reputation systems, credential verification, or web3 social primitives, let's talk.
+
+Available for: Grants, protocol partnerships, consulting
+Contact: thibaut [at] segura.design
+
+
+

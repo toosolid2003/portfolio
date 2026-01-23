@@ -4,6 +4,10 @@ import { getPosts } from "@/app/utils/utils";
 import { Column, Heading, Text } from "@/once-ui/components";
 import { formatDate } from "@/app/utils/formatDate";
 
+export const metadata = {
+  robots: "noindex, nofollow",
+};
+
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
   const posts = getPosts(["src", "app", "proposals", "proposals"]);
   return posts.map((post) => ({

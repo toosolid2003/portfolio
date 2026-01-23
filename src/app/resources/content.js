@@ -211,6 +211,15 @@ const blog = {
   // All posts will be listed on the /blog route
 };
 
+const proposals = {
+  path: "/proposals",
+  label: "Proposals",
+  title: "Proposals",
+  description: `Project proposals by ${person.name}`,
+  // Create new proposals by adding a new .mdx file to app/proposals/proposals
+  // All proposals will be listed on the /proposals route
+};
+
 const work = {
   path: "/work",
   label: "Work",
@@ -271,4 +280,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, gallery, proposals };

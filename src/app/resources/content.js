@@ -6,19 +6,19 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Web3 Builder. Strategic Operator. No BS.",
+  role: "Web3 Integration Specialist. Connecting Web3 protocols through product integrations.",
   avatar: "/images/avatar.jpg",
   email: "contact@segura.design",
-  location: "Europe/Amsterdam", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "French"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
   display: true,
-  title: <>Web3 founder? Need product traction?</>,
+  title: <>Need protocol growth through integrations?</>,
   description: (
     <>     
-      I turn early ideas into live apps.
+      I turn tech integrations into product success.
     </>
   ),
 };
@@ -53,9 +53,9 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   // title: `${person.name}'s Portfolio`,
-  title: 'Thibaut Segura, Web3 holistic builder',
+  title: 'Thibaut Segura, Web3 integation specialist',
   description: `Portfolio website showcasing my work and thoughts as a ${person.role}`,
-  headline: <>Web3 Product Lead & Builder</>,
+  headline: <>Web3 Integration Specialist</>,
   featured: {
     display: true,
     title: <>Recent project: <strong className="ml-4">Rental Scoring dApp</strong></>,
@@ -90,7 +90,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-       I am a seasoned design lead, turned Web3 Product Lead and builder. I put 15 years of experience,
+       I am a seasoned design lead, turned Web3 Integration Specialist. I put 15 years of experience,
        having released more than 20 products, to help Web3 projects ship relevant, profitable and desirable
        products at speed.
       </>

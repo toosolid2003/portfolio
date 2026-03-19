@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Web3 Integration Specialist. Connecting Web3 protocols through product integrations.",
+  role: "Turning complex infrastructure into products people actually use.",
   avatar: "/images/avatar.jpg",
   email: "contact@segura.design",
   location: "Europe/Paris", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -15,10 +15,10 @@ const person = {
 
 const newsletter = {
   display: true,
-  title: <>Need protocol growth through integrations?</>,
+  title: <>Helping teams fix products that are technically solid but not landing with users</>,
   description: (
     <>     
-      I turn tech integrations into product success.
+      When complex tech doesn’t translate into product, I fix it. In a matter of weeks.
     </>
   ),
 };
@@ -53,7 +53,7 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   // title: `${person.name}'s Portfolio`,
-  title: 'Thibaut Segura, Web3 integation specialist',
+  title: 'Thibaut Segura, Product Lead and Builder.',
   description: `Portfolio website showcasing my work and thoughts as a ${person.role}`,
   headline: <>Web3 Integration Specialist</>,
   featured: {
@@ -63,7 +63,7 @@ const home = {
   },
   subline: (
     <>
-      I help early teams move from vague ideas to usable products fast. UX, product thinking, and Solidity — all in one builder.
+      When complex tech doesn’t translate into product, I fix it. UX, product thinking, and development — all in one builder.
       <br />
     </>
   ),
@@ -90,9 +90,8 @@ const about = {
     title: "Introduction",
     description: (
       <>
-       I am a seasoned design lead, turned Web3 Integration Specialist. I put 15 years of experience,
-       having released more than 20 products, to help Web3 projects ship relevant, profitable and desirable
-       products at speed.
+       With 15 years of experience and 20+ products shipped, 
+       I help teams turn complex infrastructure into products people actually use — fast
       </>
     ),
   },
@@ -106,12 +105,12 @@ const about = {
         role: "Founder & Product Lead",
         achievements: [
           <>
-            Helped Web3 projects narrow down their product-market fit, generating sustained user adoption and
-            generating stable fees in turbulent markets.
+            Helped Web3 teams sharpen product–market fit and turn early traction into sustained user 
+            adoption and recurring fees — even in volatile markets.
           </>,
           <>
-            Streamlined product development processes, providing purpose, clarity and additional velocity to Web3 project. 
-            Result: reduced burn rate and increased capital efficiency (user acquisition, product discovery, etc)
+            Streamlined product development by bringing clarity 
+            and focus across product and engineering — reducing burn and improving capital efficiency.
           </>,
         ],
         images: [
@@ -134,7 +133,7 @@ const about = {
             issues such as acquisition, retention or LTV, through a design lens.
           </>,
           <>
-            Grew a multi-disciplianry set of design skills (business, service and product design) to approach
+            Grew a multi-disciplianry set of design skills (business, service and UX design) to approach
             increasignly challenging situations, from creating a start-up from scratch to spinning joint venutres
             with multiple high-value players.
           </>,

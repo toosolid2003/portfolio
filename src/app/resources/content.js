@@ -55,7 +55,7 @@ const home = {
   // title: `${person.name}'s Portfolio`,
   title: 'Thibaut Segura, Product Lead and Builder.',
   description: `Portfolio website showcasing my work and thoughts as a ${person.role}`,
-  headline: <>Web3 Integration Specialist</>,
+  headline: <>Product Lead - Infrastructure to Product</>,
   featured: {
     display: true,
     title: <>Recent project: <strong className="ml-4">Rental Scoring dApp</strong></>,

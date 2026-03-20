@@ -15,6 +15,7 @@ const routes = {
 const protectedRoutes = {
   "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
   "/work/preoptima": true,
+  "/work/fonterra": true,
 };
 
 import { Geist } from "next/font/google";

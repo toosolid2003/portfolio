@@ -53,7 +53,7 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   // title: `${person.name}'s Portfolio`,
-  title: 'Thibaut Segura, Product Lead and Builder.',
+  title: 'Product Lead and Builder.',
   description: `Portfolio website showcasing my work and thoughts as a ${person.role}`,
   headline: <>Product Lead - Infrastructure to Product</>,
   featured: {

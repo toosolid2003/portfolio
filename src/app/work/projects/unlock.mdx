@@ -1,0 +1,82 @@
+---
+title: "Unlock Protocol — from partial feature to real-world certification product"
+publishedAt: "2026-03-15"
+summary: "Identifying and developing a new feature for the Unlock Protocol: attestations for graduates"
+team:
+  - name: "Thibaut Segura"
+    role: "Product Lead & Builder"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/thibautsegura/"
+images:
+  - "/images/projects/unlock/unlock.jpg"
+---
+## TLDR;
+How I turned a technically valid NFT certification system into a usable, 
+real-world product by enabling verifiable personal data via attestations.
+
+## Unlock: a decentralized certification machine
+The [Unlock Protocol](https://www.unlock-protocol.com) enables creators to issue certifications as NFTs.
+However, a critical piece was missing: certifications could not include personal data.
+
+This made the feature incomplete in practice. Without verifiable identity, 
+credentials couldn’t be reliably used by employers or institutions.
+
+**The product worked technically — but didn’t translate into a real-world use case.**
+
+## My role
+- Identified the gap preventing real-world adoption
+- Defined the product direction to complete the certification flow
+- Designed the UX and underlying architecture
+- Implemented the solution end-to-end (frontend + backend)
+
+
+## Solution: attestations from the EAS
+
+I introduced attestations as a way to attach verifiable, privacy-preserving personal data to certifications.
+
+Using [Ethereum Attestation Service](https://attest.org/), I designed a system where:
+- Certifiers can define and attach relevant personal data
+- Data remains private, yet verifiable
+- Graduates can share credentials with third parties
+
+## Key decisions
+
+1. Keep the UX simple and focused
+- Reduced the feature to 4 core screens
+- Reused the existing design system
+- Avoided unnecessary complexity in the flow
+
+**Goal: make a complex system feel straightforward to use**
+
+2. Prioritize privacy over composability
+- Chose database storage (PostgreSQL) over on-chain storage
+- Ensured sensitive data remains protected
+- Accepted reduced composability in exchange for real-world usability
+
+**Trade-off: less “pure Web3”, more usable product**
+
+## Implementation
+- Designed the full user flow end-to-end
+- Built the feature with minimal impact on the existing codebase
+- Integrated attestations into Unlock’s architecture
+- Ensured scalability with lightweight data structures
+
+## Result: Transformed a partially usable feature into a complete certification product. 
+
+- Enabled real-world use cases (education, credentials, verification)
+- Made certifications usable by employers and institutions
+- Opened a clear path toward increased adoption of the protocol
+
+## Want to know more?
+Have a look at the [PR](https://github.com/unlock-protocol/unlock/pull/16304)
+
+**This is typically where I step in: 
+when a product works technically but doesn’t yet translate into real-world usage.**
+
+Feel free to reach out if you want to know more!
+
+## Screenshots
+
+![Create attestation button](/images/projects/unlock/1-display_button.png)
+![Display attestation form](/images/projects/unlock/3-create_form.png)
+![Download attestations](/images/projects/unlock/5-download_multiple_attestations.png)

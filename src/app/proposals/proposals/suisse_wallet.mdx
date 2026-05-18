@@ -1,0 +1,171 @@
+---
+title: "Suisse Wallet Product Review"
+summary: "A review of the Suisse Wallet product"
+publishedAt: "2026-05-18"
+tag: "SuisseWallet"
+image: "/images/proposals/octant_proposal.png"
+---
+
+_Note: The macOS app failed to launch due to a code signing issue discovered during installation. 
+This review is based on publicly available information — 
+the website, social presence, and documentation — 
+and reflects a product strategy perspective rather than a UX audit. 
+A full review pending access to a working build._
+
+## Heavy on capabilities, light on intent
+
+
+### Comprehensive set of capabilities
+Suisse Wallet has shipped an ambitious range of features — from atomic swaps and 
+Lightning payments to Ghost Mode, P2P trading, and a dead man's switch for inheritance. 
+The technical ambition is real, and some of these capabilities are genuinely novel in the wallet space.
+But this is where product intent gets blurred.
+Each feature serves a different user with a different mental model 
+and a different reason to care:
+
+- **Ghost Mode** → privacy-first users fleeing surveillance
+- **Swaps** → DeFi traders optimizing for trustlessness
+- **Pay** → everyday users who just want to pay for coffee
+- **P2P swaps** → OTC traders moving large amounts discreetly
+- **Inherit** → long-term holders planning for the worst
+- **Sovereignty score** → crypto idealists tracking their self-custody progress
+
+Each of these is a different person. Right now, Suisse Wallet is trying to be all of them.
+The question isn't what to build next. It's who to build for.
+
+## Orchestration starts with a target audience
+
+Suisse Wallet's brand already makes the choice — it just hasn't committed to it yet.
+
+Ghost Mode, no-KYC hardware wallet, XMR atomic swaps, the Ledger breach angle: every bold move points at the same person. 
+Not the DeFi trader chasing yield. Not the long-term holder checking prices once a week. The privacy-first user — 
+someone who believes financial privacy is a right, not a feature, and who makes product choices accordingly.
+
+This audience is underserved and underestimated. Privacy-first users are often dismissed as a niche, but 
+they have three characteristics that make them disproportionately valuable:
+
+- **They stay.** Once they find a platform they trust, they don't leave. Switching costs are high — 
+not because of lock-in, but because trust is hard to rebuild.
+- **They refer.** Privacy communities are tight. A recommendation from a trusted member carries more weight 
+than any paid acquisition channel.
+- **They tolerate friction.** They will go through more steps, learn more concepts, and accept more 
+complexity than the average user — as long as they believe in the mission.
+
+Today, no wallet puts privacy first and executes on it comprehensively. Cake Wallet does well for Monero. 
+Wasabi does well for Bitcoin coinjoin. But no one owns the full stack: pay, swap, inherit, invoice — all privacy-preserving, all non-custodial, all in one place. That's a blue ocean.
+
+The lifetime value of a Suisse Wallet user who converts could be significant — not because of transaction fees alone, 
+but because this audience manages meaningful amounts, transacts regularly, and doesn't churn.
+
+Traders, long-term holders, and crypto-curious newcomers are interesting secondary markets. 
+But trying to serve them at the same time dilutes everything. 
+Pick the privacy-first user. Build for them obsessively. The others will follow.
+
+## Structure the features for privacy-first users
+Choosing an audience is only half the work. The other half is translating that choice into a product 
+that feels inevitable — where every feature reinforces the same intent.
+
+I see two self-reinforcing intents Suisse Wallet can build around:
+
+- **Privacy for everyday life.** Not privacy as a panic button, but privacy as a default — 
+embedded in payments, transfers, and savings.
+- **Visible progress.** Users should feel themselves becoming more financially sovereign over time. 
+Not through education, but through use.
+
+These two intents create a compounding loop: people use the wallet because it provides immediate value, 
+and the wallet reflects back how far they've come. Nothing drives retention like feeling more competent in something 
+you deeply care about.
+
+This framing has a direct consequence for the product: not all features are equal. Some earn prime real estate. 
+Others serve advanced users who will find them regardless.
+
+### Prime features
+
+Four features carry the core experience:
+
+- **Pay.** Lightning-powered, QR-native, fast. This is the daily touchpoint — 
+the reason the wallet lives on your phone and not in a drawer.
+- **Transfer.** Reframe "Lightning" as a use case, not a protocol. 
+Remittances, savings, investments — private, instant, borderless. The protocol is invisible. The outcome isn't.
+- **Sovereignty Score.** The feedback loop made visible. How private am I today? What's my next step? 
+This turns a static tool into a living practice — and gives Suisse Wallet a retention mechanic no competitor has.
+- **Key Split.** Allow users to distribute their private key across trusted contacts — by email or phone number. 
+Elegant solution to the single-point-of-failure problem every self-custody user dreads. Also a natural referral mechanic: 
+to use it, you bring someone else in.
+
+Together these four features address the core jobs-to-be-done of a privacy-first user — 
+transact, transfer, track progress, stay safe — while creating a usage cycle that turns an app into a daily companion.
+
+### Secondary features
+
+Ghost Mode, Inherit, and Invoicing remain valuable — but for a narrower slice of the audience. 
+They don't need to disappear, they need to step back. Accessible to the expert user who seeks them out, 
+but not competing for attention with the core experience. In practice: a secondary navigation layer, 
+discoverable but not advertised.
+
+This isn't about cutting capabilities. It's about respecting the user's attention.
+
+### A note on trading
+
+Swaps and P2P trading serve a meaningfully different user with a meaningfully different mental model. 
+The DeFi trader optimizing for slippage and the privacy-first user paying for coffee are not the same person — 
+and designing for both simultaneously produces an experience that serves neither well.
+
+The trading capabilities are real and valuable. But they belong in a focused product: **Private Trade** — 
+a dedicated interface built around Trading View's industry-standard UX, augmented with Suisse Wallet's atomic swap and 
+P2P infrastructure. Same engine, different shell. The privacy-first user who occasionally trades can access it. 
+The serious trader gets a tool built for them.
+
+This isn't splitting the company. It's giving each user what they actually came for.
+
+## Distribution: own the channel, own the trust
+
+For a privacy-first audience, distribution is not a marketing problem. It's a trust problem. Every touchpoint — how they find you, how they download you, how they update you — is a signal about who you are.
+With that lens, three channels matter:
+
+1- **Own your webapp**
+
+Own the infrastructure, own the experience. No app store intermediary, 
+no review process that could expose your roadmap, no platform risk. For a privacy-first audience, 
+a web app you control is more trustworthy than one gated by a corporation — as long as you're transparent 
+about your stack and security practices. This is also your lowest-friction entry point for new users who want to explore 
+before committing to a download.
+
+2- **iOS**
+
+Apple's privacy track record is imperfect but credible enough for this audience — 
+and iOS dominates among the tech-forward, privacy-conscious demographic Suisse Wallet is targeting. 
+An iOS app is not a compromise. It's a reach decision. The wallet needs to live in people's pockets to 
+become a daily companion. There is no version of "privacy for everyday life" that doesn't have a mobile app.
+
+3- **Strategic partnerships**
+
+The most underrated channel for this audience. Privacy-first users already cluster around a handful of trusted platforms — 
+Proton, Mullvad, Signal, Tutanota. A white-label integration or a "powered by Suisse Wallet" arrangement with 
+any one of these puts you in front of your exact target user, with a warm introduction from a brand they already trust. 
+No paid acquisition can replicate that.
+
+**One deliberate omission: desktop.** A desktop-first wallet optimized for trading is a different product for a different user. 
+The privacy companion lives on mobile. Investment in desktop distribution — beyond basic maintenance — 
+pulls in the wrong direction.
+The hardware wallet is its own distribution channel and deserves separate treatment. It's not just a product — 
+it's a physical object in someone's home, a daily reminder of who Suisse Wallet is. Done right, it's the most powerful trust-building tool in the lineup.
+
+
+## Conclusion: win on focus, not breadth
+The wallet space is crowded. Everyone has swaps. Everyone has staking. Everyone has a roadmap that promises 
+more features next quarter. Competing on breadth is a race to the bottom — and a race Suisse Wallet cannot win against 
+teams with more funding and more engineers.
+
+But competing on focus? That's a different game entirely.
+No wallet owns the privacy-first user. Not comprehensively. Not with the full stack — pay, transfer, inherit, invoice, hardware — all non-custodial, all privacy-preserving, all designed 
+for someone who treats financial sovereignty as a principle, not a preference. That space is open. 
+And Suisse Wallet, with the capabilities it has already built, is closer to owning it than any competitor.
+The work ahead is not building more. It's making deliberate choices about what matters, to whom, and in what order. 
+Orchestrating what exists into something that feels inevitable to the right user.
+
+Every product I've shipped that worked had one thing in common: a clear answer to "who is this for?" Hestia, a rental dApp built on EAS attestations, worked because it was built for one user — a French renter navigating an opaque market — not for renters in general. The Unlock Protocol integration worked because it solved one specific problem, with full ownership, end to end. Focus wasn't a constraint. It was the strategy.
+Suisse Wallet has the ingredients, the technical depth, and a hardware wallet bet that could change the conversation entirely. 
+What it needs now is a recipe — and the discipline to follow it.
+
+Build the katana, not the Swiss Army knife.

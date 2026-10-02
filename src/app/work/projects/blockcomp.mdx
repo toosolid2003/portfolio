@@ -1,0 +1,153 @@
+---
+title: "From chaos to clarity: engineering a production-ready Web3 compensation platform"
+publishedAt: "2026-06-06"
+summary: "How Blockcomp, a Web3 compensation benchmarking startup, went from a fragile codebase and no staging environment to a production-ready platform with CI/CD, integration tests, and a solid technical foundation — ahead of their first major client presentations."
+team:
+  - name: "Thibaut Segura"
+    role: "Product Engineer & Technical Consultant"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/thibautsegura/"
+images:
+  - "/images/projects/blockcomp/main_blockcomp.jpg"
+---
+
+## A promising product on shaky foundations
+
+Blockcomp is an early-stage Web3 startup building a compensation benchmarking platform for 
+crypto and blockchain companies. Their product allows People and Finance teams to benchmark 
+salaries against market data from providers like Mercer, WTW, and Radford — a critical tool 
+in a sector where compensation structures are complex and talent competition is fierce.
+
+By the time they reached out, Blockcomp had paying clients, a pipeline that included names 
+like Consensys and SSV Labs, and a potential partnership with Dragonfly, a leading Web3 VC. 
+The product worked. But the foundation it sat on was fragile — and a high-stakes demo with 
+a major crypto client was weeks away.
+
+Their previous developer had moved on, leaving behind a codebase with no staging environment, 
+a broken CI/CD pipeline, significant technical debt in the core module, and a repository that 
+had lost 200 commits in a botched fork. Blockcomp needed someone who could stabilise the 
+platform, ship the remaining backlog, and get them to production — fast.
+
+## Constraints: speed, quality, and a demo on the horizon
+
+The engagement came with a set of hard constraints that shaped every decision.
+
+**Speed was non-negotiable.** A Moonpay presentation was imminent. Whatever state the codebase 
+was in, the platform needed to be stable and demo-ready in days, not weeks.
+
+**The technical debt was deeper than it appeared.** The CompensationRange module — the core 
+of the product — had grown to 4,000+ lines of code with duplicated logic, a security 
+vulnerability leaking compensation data to the browser console, and several oversized 
+components blending unrelated concerns.
+
+**Infrastructure was missing entirely.** There was no staging environment. No separation 
+between development and production. No automated tests beyond a few unit tests. No way 
+to verify that a change worked before it hit real client data.
+
+**The client was non-technical.** Alexis, the full-time founder, had strong product instincts 
+and excellent commercial skills but limited visibility into engineering complexity. Translating 
+technical decisions into business language — and setting realistic expectations — was as 
+important as the code itself.
+
+## Approach: stabilise, then improve
+
+Rather than tackling everything at once, the work was broken into two clear phases: 
+get the platform stable enough for the demo, then improve the foundation properly.
+
+### Discovery and triage
+
+The first step was understanding what actually existed. This revealed several surprises:
+
+- Felix's repository was a fork that had only copied the `main` branch, silently discarding 
+200 commits of work — including an entire Visualization tab — from the previous developer's 
+`develop` branch.
+- Two Supabase projects existed in parallel, with different data, different configurations, 
+and no clear documentation of which was production.
+- The CI/CD pipeline Mykyta had built was fully functional but had been disabled when the 
+repository was forked.
+
+None of these were visible from the outside. Discovery alone — before writing a single line 
+of code — prevented what could have been a catastrophic deployment to the wrong environment.
+
+### Refactoring the CompensationRange module
+
+Eleven tickets were delivered across refactoring, bug fixes, and new features:
+
+- **Security fix (immediate):** Removed a `console.log` leaking raw compensation data to 
+the browser console — a genuine data security risk that needed fixing regardless of any 
+other work.
+- **Deduplication:** Consolidated `formatCurrency` (defined 7 times), `getLevelBadgeColor` 
+(defined 4 times with conflicting signatures), `compensationOptions` (defined 5 times), 
+and `COMPENSATION_ELEMENT_LABELS` (defined twice identically).
+- **Dead code removal:** Removed unreachable branches, permanently-disabled debug functions, 
+and an unused memo that always returned the same value.
+- **Structural improvements:** Extracted oversized components into dedicated files, renamed 
+a misplaced utility, consolidated two parallel notification systems into one.
+- **Bug fixes:** Corrected a total compensation calculation bug in Job Pricing, fixed an 
+Internal Practice data comparison issue, and resolved a composite benchmark calculation error.
+- **New feature:** Built an Add Range dialog allowing manual creation of compensation ranges 
+from the Bands tab, with cascading dropdowns and preservation of manually-adjusted bands 
+across benchmark saves.
+
+### Infrastructure from scratch
+
+With no staging environment and a demo approaching, a full infrastructure setup was built 
+in parallel with the refactoring work:
+
+- **Staging environment:** `staging.blockcomp.io` configured end-to-end — DNS records via 
+o2switch cPanel, Vercel domain connection to the `develop` branch, Supabase authentication 
+redirect URLs whitelisted, magic link flow verified.
+- **Repository recovery:** The 200 missing commits were recovered via remote add and rebase, 
+with conflict resolution, restoring the full development history including the Visualization tab.
+- **CI/CD restoration:** GitHub Actions pipeline reactivated with required secrets configured 
+— covering unit tests, integration tests with RLS security checks, Playwright end-to-end 
+tests, Supabase migration sync, and gated production deployments.
+- **Integration test infrastructure:** Vitest integration test setup built against a local 
+Supabase instance, with the first tests verifying the core compensation calculation logic 
+that had been the source of the total comp bug.
+- **Production deployment:** Terraform-managed infrastructure, Sentry monitoring, full test 
+suite (unit, integration, end-to-end, security) passing before each deployment.
+
+### Codebase audit and architectural findings
+
+A deeper audit of the SQL layer revealed a systemic pattern: the same 15-level benchmark 
+cascade logic — which progressively broadens the matching scope from exact job title and 
+country down to level-only global fallback — existed in at least five different SQL functions, 
+each implemented differently, each with a slightly different output shape, each maintained 
+independently.
+
+This kind of duplication, common in AI-assisted codebases that grow feature-by-feature 
+without architectural oversight, creates compounding maintenance risk. Every bug fix needs 
+to be applied in five places. Every new feature risks adding a sixth implementation. 
+Every inconsistency between implementations is a potential source of wrong compensation 
+data for paying clients.
+
+This finding informed the roadmap for the next phase of work: consolidating the cascade 
+into a single, parameterised, data-driven function before Blockcomp scales to the 30 users 
+their pipeline suggests is imminent.
+
+## Results: production-ready, demo-ready, and a foundation that scales
+
+The platform went live with a full test suite passing across unit, integration, end-to-end, 
+and security layers. Staging and production are now properly isolated, with a clear 
+deployment pipeline from development through to production.
+
+Blockcomp ran their Moonpay demo on a stable, tested platform. SSV Labs, Consensys, and 
+Parity are in various stages of onboarding and legal review. The technical foundation 
+now supports the growth trajectory the commercial team is pursuing.
+
+Beyond the immediate deliverables, the engagement established a working methodology for 
+future development: sprint-based engagements with a spec call before any code is written, 
+business rules formalised in tickets before implementation begins, and tests written before 
+the feature — so that what was agreed is provably what shipped.
+
+## Reflections: clarity as the core deliverable
+
+What Blockcomp needed wasn't just code. They needed someone who could look at a fragile, 
+undocumented, partially-broken system and bring clarity to it — identifying what was 
+actually wrong, explaining it in terms that made sense to a non-technical founder, 
+prioritising ruthlessly under time pressure, and building something that could be handed 
+back with confidence.
+
+That combination — technical execution, product judgment, and client communication — 
+is what this engagement was really about. The code was the medium. Clarity was the product.

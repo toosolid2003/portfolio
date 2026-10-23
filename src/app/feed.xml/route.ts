@@ -1,6 +1,8 @@
 import { getPosts } from "@/app/utils/utils";
 import { baseURL, person } from "@/app/resources";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   const posts = getPosts(["src", "app", "blog", "posts"]).sort(
     (a, b) =>
@@ -41,7 +43,6 @@ export async function GET() {
   return new Response(xml, {
     headers: {
       "Content-Type": "application/xml",
-      "Cache-Control": "public, max-age=3600, s-maxage=3600",
     },
   });
 }

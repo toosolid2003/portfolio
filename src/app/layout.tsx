@@ -14,13 +14,20 @@ import Script from 'next/script'
 import Head from 'next/head'
 
 export async function generateMetadata() {
-  return Meta.generate({
-    title: home.title,
-    description: home.description,
-    baseURL: baseURL,
-    path: home.path,
-    image: home.image,
-  });
+  return {
+    ...Meta.generate({
+      title: home.title,
+      description: home.description,
+      baseURL: baseURL,
+      path: home.path,
+      image: home.image,
+    }),
+    alternates: {
+      types: {
+        "application/rss+xml": `${baseURL}/feed.xml`,
+      },
+    },
+  };
 }
 
 interface RootLayoutProps {

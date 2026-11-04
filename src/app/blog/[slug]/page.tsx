@@ -29,7 +29,7 @@ export async function generateMetadata( { params } : { params: Promise<{ slug : 
     title: post.metadata.title,
     description: post.metadata.summary,
     baseURL: baseURL,
-    image: post.metadata.image ? `${baseURL}${post.metadata.image}` : `${baseURL}/og?title=${post.metadata.title}`,
+    image: post.metadata.image ? `${baseURL}${post.metadata.image}` : `${baseURL}/images/og/home.jpg`,
     path: `${blog.path}/${post.slug}`,
   });
 }
@@ -66,7 +66,7 @@ export default async function Blog({
             description={post.metadata.summary}
             datePublished={post.metadata.publishedAt}
             dateModified={post.metadata.publishedAt}
-            image={`${baseURL}/og?title=${encodeURIComponent(post.metadata.title)}`}
+            image={`${baseURL}/images/og/home.jpg`}
             author={{
               name: person.name,
               url: `${baseURL}${about.path}`,

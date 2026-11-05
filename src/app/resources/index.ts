@@ -6,6 +6,7 @@ export {
   style,
   display,
   mailchimp,
+  contactForm,
   baseURL,
   font,
 } from "@/app/resources/config";
@@ -19,4 +20,4 @@ export {
   work,
   gallery,
   proposals,
-} from "@/app/resources/content";
+} from "@/app/resources/content";

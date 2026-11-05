@@ -141,4 +141,11 @@ const mailchimp = {
   },
 };
 
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL, font };
+// Contact form (Web3Forms). The access key is meant to be public: it only lets
+// people send messages to your inbox. Get one at https://web3forms.com
+const contactForm = {
+  accessKey: "b3839014-0c84-478d-bb82-670280f949f3",
+  email: "contact@segura.design",
+};
+
+export { contactForm, routes, protectedRoutes, effects, style, display, mailchimp, baseURL, font };

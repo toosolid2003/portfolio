@@ -18,7 +18,8 @@ const newsletter = {
   title: <>Helping teams fix products that are technically solid but not landing with users</>,
   description: (
     <>     
-      When complex tech doesn’t translate into product, I fix it. In a matter of weeks.
+      When complex tech doesn’t translate into product, I fix it. Low adoption, slow delivery or an 
+      unclear roadmap? Send me a few lines about your product and I’ll tell you where I’d start, in 20 minutes.
     </>
   ),
 };

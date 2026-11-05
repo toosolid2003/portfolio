@@ -59,7 +59,7 @@ const home = {
   headline: <>Product Lead - Infrastructure to Product</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Unlock Protocol integration</strong></>,
+    title: <>Recent project: <strong className="ml-4">Blockcomp: from MVP to production-ready</strong></>,
     href: "/work/unlock",
   },
   subline: (
